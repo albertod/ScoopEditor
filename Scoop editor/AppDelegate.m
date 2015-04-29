@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import "ADMLoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,30 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    // [Optional] Power your app with Local Datastore. For more info, go to
+    // https://parse.com/docs/ios_guide#localdatastore/iOS
+    [Parse enableLocalDatastore];
+    // Initialize Parse.
+    [Parse setApplicationId:@"TTtkqhWmL3C6qHBl8ea3VrH584eEKU1xtUv1sPUc"
+                  clientKey:@"UpNBdk5ueL6oBfkE1e1AR987A2FmHWkH8lM2zLbI"];
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
+    //Tab bar controller
+    self.tabBarController = [[UITabBarController alloc]init];
+    
+
+    ADMLoginViewController *loginVC = [ADMLoginViewController new];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    self.window.rootViewController = loginVC;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
