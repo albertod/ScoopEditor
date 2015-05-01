@@ -9,9 +9,9 @@ USER:a PASS: a
 
 Imagenes son subidas en background entonces pueden tardar un tiempo en ser subidas al servidor. 
 
-Codigo "Cloud Code" que actualiza las noticas No Publicadas a Publicadas para ser leidas por los usuarios.
+Codigo "Cloud Code" que actualiza las noticas No Publicadas a Publicadas para ser leidas por los usuarios:
 
-Parse.Cloud.job("uploadNews", function(request, status) {
+  Parse.Cloud.job("uploadNews", function(request, status) {
   // Set up to modify user data
   Parse.Cloud.useMasterKey();
   var query = new Parse.Query("ADMNew");
