@@ -2,7 +2,9 @@
 Scoop News Manager
 
 Hay dos cuentas de editores para la aplicion:
+
 USER:albertodm PASS:cloudcomputing
+
 USER:a PASS: a
 
 Imagenes son subidas en background entonces pueden tardar un tiempo en ser subidas al servidor. 
