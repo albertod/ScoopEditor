@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ADMNew.h"
 
-@interface ADMNewArticleViewController : UIViewController
+@interface ADMNewArticleViewController : UIViewController <UITextFieldDelegate,CLLocationManagerDelegate>
 
 @property (strong,nonatomic) ADMNew *model;
 
@@ -20,11 +20,15 @@
 @property (weak, nonatomic) IBOutlet UILabel *authorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *missingTitleLabelWarning;
 @property (weak, nonatomic) IBOutlet UILabel *missingContentLabelWarning;
+@property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 
 @property (strong,nonatomic) PFUser *userLogged;
 
+- (IBAction)photoUploadButton:(id)sender;
 -(IBAction)uploadButton:(id)sender;
 -(id) initWithUser:(PFUser *) user;
+
+
 
 
 @end

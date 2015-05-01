@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		D33DD8421AF12A7F003D7D9B /* ADMAuthorNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D33DD8411AF12A7F003D7D9B /* ADMAuthorNewsTableViewController.m */; };
 		D33DD8451AF154D6003D7D9B /* ADMNewsReaderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D33DD8441AF154D6003D7D9B /* ADMNewsReaderTableViewController.m */; };
-		D33DD8481AF157D6003D7D9B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33DD8461AF156CB003D7D9B /* Parse.framework */; };
+		D33DD84C1AF1705F003D7D9B /* ADMReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D33DD84A1AF1705F003D7D9B /* ADMReaderViewController.m */; };
+		D33DD84D1AF1705F003D7D9B /* ADMReaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D33DD84B1AF1705F003D7D9B /* ADMReaderViewController.xib */; };
 		D3B871361AEDDA11003B9D24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B871351AEDDA11003B9D24 /* main.m */; };
 		D3B871391AEDDA11003B9D24 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B871381AEDDA11003B9D24 /* AppDelegate.m */; };
 		D3B871411AEDDA11003B9D24 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3B871401AEDDA11003B9D24 /* Images.xcassets */; };
@@ -32,6 +33,10 @@
 		D3B8718C1AEF15FA003B9D24 /* ADMNew.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8718B1AEF15FA003B9D24 /* ADMNew.m */; };
 		D3B871901AEF188B003B9D24 /* ADMNewArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8718E1AEF188B003B9D24 /* ADMNewArticleViewController.m */; };
 		D3B871911AEF188B003B9D24 /* ADMNewArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B8718F1AEF188B003B9D24 /* ADMNewArticleViewController.xib */; };
+		D3BDE84B1AF3CC190071D7FB /* ADMPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BDE84A1AF3CC190071D7FB /* ADMPhoto.m */; };
+		D3BDE84F1AF3D0090071D7FB /* AGTPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BDE84D1AF3D0090071D7FB /* AGTPhotoViewController.m */; };
+		D3BDE8501AF3D0090071D7FB /* AGTPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BDE84E1AF3D0090071D7FB /* AGTPhotoViewController.xib */; };
+		D3D60B171AF1CEE900416941 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D60B161AF1CEE900416941 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +54,10 @@
 		D33DD8411AF12A7F003D7D9B /* ADMAuthorNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMAuthorNewsTableViewController.m; sourceTree = "<group>"; };
 		D33DD8431AF154D6003D7D9B /* ADMNewsReaderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMNewsReaderTableViewController.h; sourceTree = "<group>"; };
 		D33DD8441AF154D6003D7D9B /* ADMNewsReaderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMNewsReaderTableViewController.m; sourceTree = "<group>"; };
-		D33DD8461AF156CB003D7D9B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		D33DD8491AF1705F003D7D9B /* ADMReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMReaderViewController.h; sourceTree = "<group>"; };
+		D33DD84A1AF1705F003D7D9B /* ADMReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMReaderViewController.m; sourceTree = "<group>"; };
+		D33DD84B1AF1705F003D7D9B /* ADMReaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADMReaderViewController.xib; sourceTree = "<group>"; };
+		D3B52D3D1AF1B3D600254939 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D3B871301AEDDA11003B9D24 /* Scoop editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scoop editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B871341AEDDA11003B9D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3B871351AEDDA11003B9D24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -80,6 +88,12 @@
 		D3B8718D1AEF188B003B9D24 /* ADMNewArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMNewArticleViewController.h; sourceTree = "<group>"; };
 		D3B8718E1AEF188B003B9D24 /* ADMNewArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMNewArticleViewController.m; sourceTree = "<group>"; };
 		D3B8718F1AEF188B003B9D24 /* ADMNewArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADMNewArticleViewController.xib; sourceTree = "<group>"; };
+		D3BDE8491AF3CC190071D7FB /* ADMPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMPhoto.h; sourceTree = "<group>"; };
+		D3BDE84A1AF3CC190071D7FB /* ADMPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMPhoto.m; sourceTree = "<group>"; };
+		D3BDE84C1AF3D0090071D7FB /* AGTPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTPhotoViewController.h; sourceTree = "<group>"; };
+		D3BDE84D1AF3D0090071D7FB /* AGTPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTPhotoViewController.m; sourceTree = "<group>"; };
+		D3BDE84E1AF3D0090071D7FB /* AGTPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTPhotoViewController.xib; sourceTree = "<group>"; };
+		D3D60B161AF1CEE900416941 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../../Downloads/parse-library-1.7.1/Parse.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D33DD8481AF157D6003D7D9B /* Parse.framework in Frameworks */,
+				D3D60B171AF1CEE900416941 /* Parse.framework in Frameworks */,
 				D3B8717F1AEDFE37003B9D24 /* libsqlite3.dylib in Frameworks */,
 				D3B8717D1AEDFE2C003B9D24 /* libz.dylib in Frameworks */,
 				D3B8717B1AEDFE22003B9D24 /* SystemConfiguration.framework in Frameworks */,
@@ -116,6 +130,7 @@
 		D3B871271AEDDA11003B9D24 = {
 			isa = PBXGroup;
 			children = (
+				D3D60B161AF1CEE900416941 /* Parse.framework */,
 				D3B871321AEDDA11003B9D24 /* Scoop editor */,
 				D3B8714C1AEDDA11003B9D24 /* Scoop editorTests */,
 				D3B871311AEDDA11003B9D24 /* Products */,
@@ -148,11 +163,11 @@
 		D3B871331AEDDA11003B9D24 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D3B52D3D1AF1B3D600254939 /* Parse.framework */,
 				D3B871341AEDDA11003B9D24 /* Info.plist */,
 				D3B871351AEDDA11003B9D24 /* main.m */,
 				D3B8717E1AEDFE37003B9D24 /* libsqlite3.dylib */,
 				D3B8717C1AEDFE2C003B9D24 /* libz.dylib */,
-				D33DD8461AF156CB003D7D9B /* Parse.framework */,
 				D3B8717A1AEDFE22003B9D24 /* SystemConfiguration.framework */,
 				D3B871781AEDFE1C003B9D24 /* StoreKit.framework */,
 				D3B871761AEDFE14003B9D24 /* Security.framework */,
@@ -189,6 +204,8 @@
 			children = (
 				D3B8718A1AEF15FA003B9D24 /* ADMNew.h */,
 				D3B8718B1AEF15FA003B9D24 /* ADMNew.m */,
+				D3BDE8491AF3CC190071D7FB /* ADMPhoto.h */,
+				D3BDE84A1AF3CC190071D7FB /* ADMPhoto.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -206,6 +223,12 @@
 				D33DD8411AF12A7F003D7D9B /* ADMAuthorNewsTableViewController.m */,
 				D33DD8431AF154D6003D7D9B /* ADMNewsReaderTableViewController.h */,
 				D33DD8441AF154D6003D7D9B /* ADMNewsReaderTableViewController.m */,
+				D33DD8491AF1705F003D7D9B /* ADMReaderViewController.h */,
+				D33DD84A1AF1705F003D7D9B /* ADMReaderViewController.m */,
+				D33DD84B1AF1705F003D7D9B /* ADMReaderViewController.xib */,
+				D3BDE84C1AF3D0090071D7FB /* AGTPhotoViewController.h */,
+				D3BDE84D1AF3D0090071D7FB /* AGTPhotoViewController.m */,
+				D3BDE84E1AF3D0090071D7FB /* AGTPhotoViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -294,6 +317,8 @@
 				D3B871891AEE08F7003B9D24 /* ADMLoginViewController.xib in Resources */,
 				D3B871441AEDDA11003B9D24 /* LaunchScreen.xib in Resources */,
 				D3B871411AEDDA11003B9D24 /* Images.xcassets in Resources */,
+				D33DD84D1AF1705F003D7D9B /* ADMReaderViewController.xib in Resources */,
+				D3BDE8501AF3D0090071D7FB /* AGTPhotoViewController.xib in Resources */,
 				D3B871911AEF188B003B9D24 /* ADMNewArticleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,8 +337,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3BDE84B1AF3CC190071D7FB /* ADMPhoto.m in Sources */,
+				D33DD84C1AF1705F003D7D9B /* ADMReaderViewController.m in Sources */,
 				D3B871901AEF188B003B9D24 /* ADMNewArticleViewController.m in Sources */,
 				D3B871391AEDDA11003B9D24 /* AppDelegate.m in Sources */,
+				D3BDE84F1AF3D0090071D7FB /* AGTPhotoViewController.m in Sources */,
 				D33DD8421AF12A7F003D7D9B /* ADMAuthorNewsTableViewController.m in Sources */,
 				D3B871881AEE08F7003B9D24 /* ADMLoginViewController.m in Sources */,
 				D33DD8451AF154D6003D7D9B /* ADMNewsReaderTableViewController.m in Sources */,
@@ -437,7 +465,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Scoop editor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Scoop",
+					editor,
+					"$(PROJECT_DIR)/Scoop",
+					editor,
+					"/Users/Alberto/Downloads/parse-library-1.7.1",
+				);
 				INFOPLIST_FILE = "Scoop editor/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -453,6 +487,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Scoop",
 					editor,
+					"$(PROJECT_DIR)/Scoop",
+					editor,
+					"/Users/Alberto/Downloads/parse-library-1.7.1",
 				);
 				INFOPLIST_FILE = "Scoop editor/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

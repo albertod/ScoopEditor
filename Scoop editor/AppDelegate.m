@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <Parse/Parse.h>
-#import "ADMLoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -27,18 +25,18 @@
                   clientKey:@"UpNBdk5ueL6oBfkE1e1AR987A2FmHWkH8lM2zLbI"];
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
+
     
     //Tab bar controller
     self.tabBarController = [[UITabBarController alloc]init];
-    
+    self.appDNAV = [UINavigationController new];
 
     ADMLoginViewController *loginVC = [ADMLoginViewController new];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    
-    self.window.rootViewController = loginVC;
+    [self.appDNAV pushViewController:loginVC animated:YES];
+    self.window.rootViewController = self.appDNAV;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 

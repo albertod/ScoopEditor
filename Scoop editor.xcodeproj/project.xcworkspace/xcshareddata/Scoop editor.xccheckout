@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>355BBB33-5DD5-4D2C-B2AC-8F94957F317C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Scoop editor</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3C16997CD59EB3AE6B64A616C147206486F6A3D0</key>
+		<string>https://github.com/albertod/ScoopEditor.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Scoop editor.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3C16997CD59EB3AE6B64A616C147206486F6A3D0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/albertod/ScoopEditor.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3C16997CD59EB3AE6B64A616C147206486F6A3D0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3C16997CD59EB3AE6B64A616C147206486F6A3D0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Scoop%20editor</string>
+		</dict>
+	</array>
+</dict>
+</plist>

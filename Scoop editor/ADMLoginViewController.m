@@ -8,8 +8,10 @@
 
 #import "ADMLoginViewController.h"
 #import "ADMNewArticleViewController.h"
-#import "AppDelegate.h"
 #import "ADMAuthorNewsTableViewController.h"
+#import "AppDelegate.h"
+#import "ADMNewsReaderTableViewController.h"
+
 @interface ADMLoginViewController ()
 
 @end
@@ -20,26 +22,12 @@
     [super viewDidLoad];
     
     self.incorrectCredentialsLabel.hidden = YES;
-//    self.userTextField.layer.borderColor = [[UIColor blackColor] CGColor];
-//    self.passTextField.layer.borderColor = [[UIColor blackColor] CGColor];
-//    self.userTextField.layer.borderColor = [[UIColor blackColor] CGColor];
-//    self.passTextField.layer.borderColor = [[UIColor blackColor] CGColor];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)logInButton:(id)sender {
     
@@ -62,12 +50,17 @@
             
             AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
             appDelegate.tabBarController.viewControllers= @[articleVC,newsTVC];
-            [appDelegate.window setRootViewController:appDelegate.tabBarController];
+            [appDelegate.appDNAV pushViewController:appDelegate.tabBarController animated:YES];
+            [appDelegate.window setRootViewController:appDelegate.appDNAV];
     }
     }];
 
 }
 
 - (IBAction)readButton:(id)sender {
+    
+    ADMNewsReaderTableViewController *readerVC = [ADMNewsReaderTableViewController new];
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate.appDNAV pushViewController:readerVC animated:YES];
 }
 @end

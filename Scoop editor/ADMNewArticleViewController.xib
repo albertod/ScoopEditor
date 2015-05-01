@@ -10,6 +10,7 @@
                 <outlet property="contentText" destination="fSH-SZ-4ig" id="oox-vX-dYf"/>
                 <outlet property="missingContentLabelWarning" destination="Csx-KE-hIO" id="bZi-9s-3X4"/>
                 <outlet property="missingTitleLabelWarning" destination="vPh-qD-QZ2" id="NwI-uc-w21"/>
+                <outlet property="ratingLabel" destination="vQu-ho-hN6" id="Fqj-eS-CJc"/>
                 <outlet property="titleLabel" destination="aS8-uh-CaR" id="E2K-pY-rLE"/>
                 <outlet property="titleTextField" destination="VKy-M9-Ra0" id="Pdw-TR-lCb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -23,34 +24,34 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aS8-uh-CaR">
                     <rect key="frame" x="50" y="102" width="33" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="heightClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="46" y="197" width="33" height="21"/>
+                        <rect key="frame" x="46" y="152" width="33" height="21"/>
                     </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xq3-0D-Izn">
                     <rect key="frame" x="50" y="144" width="52" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="heightClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="46" y="239" width="52" height="21"/>
+                        <rect key="frame" x="46" y="210" width="52" height="21"/>
                     </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCb-FF-zXJ">
                     <rect key="frame" x="50" y="226" width="62" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="heightClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="46" y="321" width="62" height="21"/>
+                        <rect key="frame" x="46" y="249" width="62" height="21"/>
                     </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yV-QN-gme">
                     <rect key="frame" x="142" y="144" width="102" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="heightClass=regular" fixedFrame="YES">
                         <rect key="frame" x="138" y="239" width="0.0" height="0.0"/>
@@ -62,8 +63,11 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <variation key="heightClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="130" y="193" width="263" height="30"/>
+                        <rect key="frame" x="130" y="148" width="263" height="30"/>
                     </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="uKd-Pf-WjW"/>
+                    </connections>
                 </textField>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fSH-SZ-4ig">
                     <rect key="frame" x="50" y="255" width="406" height="188"/>
@@ -71,37 +75,19 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <variation key="heightClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="46" y="350" width="347" height="188"/>
-                    </variation>
-                </textView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHK-vc-pbQ">
-                    <rect key="frame" x="58" y="489" width="41" height="30"/>
-                    <color key="backgroundColor" red="0.90530303030000003" green="0.90530303030000003" blue="0.90530303030000003" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Photo"/>
-                    <variation key="heightClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="54" y="584" width="41" height="30"/>
-                    </variation>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbO-0h-1NI">
-                    <rect key="frame" x="58" y="439" width="50" height="30"/>
-                    <color key="backgroundColor" red="0.86700994318181812" green="0.86700994318181812" blue="0.86700994318181812" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Upload">
-                        <color key="titleShadowColor" red="0.90530303030000003" green="0.90530303030000003" blue="0.90530303030000003" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                    </state>
-                    <variation key="heightClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="164" y="584" width="50" height="30"/>
+                        <rect key="frame" x="46" y="288" width="297" height="171"/>
                     </variation>
                     <connections>
-                        <action selector="uploadButton:" destination="-1" eventType="touchUpInside" id="gcD-vv-2i3"/>
+                        <outlet property="delegate" destination="-1" id="5ow-Zr-EuM"/>
                     </connections>
-                </button>
+                </textView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykb-kJ-0Zu">
                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="heightClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="130" y="239" width="131" height="21"/>
+                        <rect key="frame" x="129" y="210" width="131" height="21"/>
                     </variation>
                 </label>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Needs title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPh-qD-QZ2">
@@ -110,7 +96,7 @@
                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="heightClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="117" y="155" width="82" height="21"/>
+                        <rect key="frame" x="106" y="114" width="82" height="21"/>
                     </variation>
                 </label>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Needs Content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csx-KE-hIO">
@@ -119,16 +105,16 @@
                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="heightClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="238" y="155" width="116" height="21"/>
+                        <rect key="frame" x="227" y="114" width="116" height="21"/>
                     </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Article" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTP-oA-Y1r">
                     <rect key="frame" x="213" y="34" width="88" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="heightClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="164" y="110" width="88" height="21"/>
+                        <rect key="frame" x="173" y="76" width="88" height="21"/>
                     </variation>
                 </label>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Q1-pf-unz">
@@ -143,8 +129,50 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0h-Wl-qml">
                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHK-vc-pbQ">
+                    <rect key="frame" x="58" y="489" width="41" height="30"/>
+                    <color key="backgroundColor" red="0.90530303030000003" green="0.90530303030000003" blue="0.90530303030000003" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Photo"/>
+                    <variation key="heightClass=regular" fixedFrame="YES">
+                        <rect key="frame" x="46" y="483" width="41" height="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="photoUploadButton:" destination="-1" eventType="touchUpInside" id="fWQ-cI-cot"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbO-0h-1NI">
+                    <rect key="frame" x="58" y="439" width="50" height="30"/>
+                    <color key="backgroundColor" red="0.86700994318181812" green="0.86700994318181812" blue="0.86700994318181812" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Upload">
+                        <color key="titleShadowColor" red="0.90530303030000003" green="0.90530303030000003" blue="0.90530303030000003" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                    </state>
+                    <variation key="heightClass=regular" fixedFrame="YES">
+                        <rect key="frame" x="156" y="483" width="50" height="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="uploadButton:" destination="-1" eventType="touchUpInside" id="gcD-vv-2i3"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uD-ar-Avm">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular" fixedFrame="YES">
+                        <rect key="frame" x="138" y="249" width="50" height="21"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQu-ho-hN6">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular" fixedFrame="YES">
+                        <rect key="frame" x="213" y="249" width="42" height="21"/>
+                    </variation>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -155,6 +183,8 @@
                     <exclude reference="Csx-KE-hIO"/>
                     <exclude reference="2Q1-pf-unz"/>
                     <exclude reference="g0h-Wl-qml"/>
+                    <exclude reference="1uD-ar-Avm"/>
+                    <exclude reference="vQu-ho-hN6"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
@@ -164,6 +194,8 @@
                     <include reference="Csx-KE-hIO"/>
                     <include reference="2Q1-pf-unz"/>
                     <exclude reference="g0h-Wl-qml"/>
+                    <include reference="1uD-ar-Avm"/>
+                    <include reference="vQu-ho-hN6"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="314" y="273"/>

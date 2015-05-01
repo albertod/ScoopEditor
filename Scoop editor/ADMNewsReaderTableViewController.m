@@ -7,12 +7,14 @@
 //
 
 #import "ADMNewsReaderTableViewController.h"
+#import "ADMNew.h"
 #import <Parse/Parse.h>
+#import "ADMReaderViewController.h"
 
-NSArray *publicatedNews;
+
 
 @interface ADMNewsReaderTableViewController ()
-
+@property (strong,nonatomic) NSArray *publicatedNews;
 @end
 
 @implementation ADMNewsReaderTableViewController
@@ -20,7 +22,6 @@ NSArray *publicatedNews;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title =  @"Scoops News";
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -45,10 +46,30 @@ NSArray *publicatedNews;
     NSSortDescriptor *brandDescriptor = [[NSSortDescriptor alloc] initWithKey:@"titleText" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObject:brandDescriptor];
     PFQuery *query = [PFQuery queryWithClassName:@"ADMNew"];
+    
     [query whereKey:@"publicated" equalTo:@"Publicated"];
-    publicatedNews = [query findObjects];
-    publicatedNews = [publicatedNews sortedArrayUsingDescriptors:sortDescriptors];
-    return publicatedNews.count;
+    _publicatedNews = [query findObjects];
+    _publicatedNews = [_publicatedNews sortedArrayUsingDescriptors:sortDescriptors];
+    return _publicatedNews.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    ADMNew *news = nil;
+    news = [_publicatedNews objectAtIndex:indexPath.row];
+
+    static NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if(cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    cell.textLabel.text = news.titleText;
+    //cell.imageView.image = ;
+    cell.detailTextLabel.text = news.author;
+    //Rating
+    return cell;
 }
 
 -(NSString *) tableView:(UITableView *)tableView
@@ -57,6 +78,17 @@ titleForHeaderInSection:(NSInteger)section{
         return @"Publicated News";
 }
 
+
+//Delegate
+-(void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    ADMNew *news = [_publicatedNews objectAtIndex:indexPath.row];
+    ADMReaderViewController *readerVC = [[ADMReaderViewController alloc] initWithmodel:news];
+    [self.navigationController pushViewController:readerVC animated:YES];
+    
+    
+}
 
 
 @end

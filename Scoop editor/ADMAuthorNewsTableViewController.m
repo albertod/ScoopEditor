@@ -10,10 +10,12 @@
 #import "ADMNew.h"
 @interface ADMAuthorNewsTableViewController ()
 
+@property (strong,nonatomic) NSArray *publicatedNews;
+@property (strong,nonatomic) NSArray *nonPublicatedNews;
+
 @end
 
-NSArray *publicatedNews;
-NSArray *nonPublicatedNews;
+
 
 @implementation ADMAuthorNewsTableViewController
 
@@ -50,14 +52,14 @@ NSArray *nonPublicatedNews;
     PFQuery *query = [PFQuery queryWithClassName:@"ADMNew"];
     if(section == PUBLICATED_SECTION){
         [query whereKey:@"publicated" equalTo:@"Publicated"];
-        publicatedNews = [query findObjects];
-        publicatedNews = [publicatedNews sortedArrayUsingDescriptors:sortDescriptors];
-        return publicatedNews.count;
+        _publicatedNews = [query findObjects];
+        _publicatedNews = [_publicatedNews sortedArrayUsingDescriptors:sortDescriptors];
+        return _publicatedNews.count;
     }else{
         [query whereKey:@"publicated" equalTo:@"No-Publicated"];
-        nonPublicatedNews = [query findObjects];
-        nonPublicatedNews = [nonPublicatedNews  sortedArrayUsingDescriptors:sortDescriptors];
-        return nonPublicatedNews.count;
+        _nonPublicatedNews = [query findObjects];
+        _nonPublicatedNews = [_nonPublicatedNews  sortedArrayUsingDescriptors:sortDescriptors];
+        return _nonPublicatedNews.count;
     }
     
     
@@ -71,9 +73,9 @@ NSArray *nonPublicatedNews;
     
     ADMNew *news = nil;
     if(indexPath.section == PUBLICATED_SECTION){
-        news = [publicatedNews objectAtIndex:indexPath.row];
+        news = [_publicatedNews objectAtIndex:indexPath.row];
     }else{
-        news = [nonPublicatedNews objectAtIndex:indexPath.row];
+        news = [_nonPublicatedNews objectAtIndex:indexPath.row];
     }
     
     static NSString *cellIdentifier = @"Cell";
@@ -98,39 +100,5 @@ titleForHeaderInSection:(NSInteger)section{
         return @"News in review";
     }
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 @end

@@ -15,8 +15,11 @@
 @dynamic textContent;
 @dynamic photo;
 @dynamic author;
-@dynamic cordinates;
+@dynamic latitude;
+@dynamic longitude;
 @dynamic publicated;
+@dynamic rating;
+@dynamic ratingNumber;
 
 
 +(void)load{
@@ -26,5 +29,9 @@
 + (NSString *) parseClassName{
     return @"ADMNew";
 }
+
+
+
+
 
 @end

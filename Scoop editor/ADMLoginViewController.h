@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+
 @interface ADMLoginViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *screenTitle;
 @property (weak, nonatomic) IBOutlet UILabel *userLabel;

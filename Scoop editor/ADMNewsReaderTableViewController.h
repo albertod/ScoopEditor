@@ -6,8 +6,20 @@
 //  Copyright (c) 2015 DiMartino. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+#import "ADMNew.h"
+
+@class ADMNewsReaderTableViewController;
+
+@protocol ADMAuthorNewsTableViewControllerDelegate
+@optional
+
+-(void) authorNewsTableViewController:(ADMNewsReaderTableViewController *) newTVC
+                        didSelectANew:(ADMNew *) theNew;
+@end
 
 @interface ADMNewsReaderTableViewController : UITableViewController
+
+@property (weak,nonatomic) id<ADMAuthorNewsTableViewControllerDelegate> delegate;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Parse/Parse.h"
+#import <Parse/Parse.h>
 #define NUMBER_OF_SECTIONS 2
 #define NO_PUBLICATED_SECTION 0
 #define PUBLICATED_SECTION 1

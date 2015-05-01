@@ -11,11 +11,13 @@
 
 @property (nonatomic,strong) NSString *titleText;
 @property (nonatomic,strong) NSString *textContent;
-@property (nonatomic,strong) UIImage  *photo;
+@property (nonatomic,strong) NSData   *photo;
 @property (nonatomic,strong) NSString *author;
-@property (nonatomic,strong) PFGeoPoint *cordinates;
+@property (nonatomic,strong) NSNumber *latitude;
+@property (nonatomic,strong) NSNumber *longitude;
 @property (nonatomic,strong) NSString *publicated;
-
+@property (nonatomic,strong) NSNumber *rating;
+@property (nonatomic,strong) NSNumber *ratingNumber;
 
 +(NSString *)parseClassName;
 
